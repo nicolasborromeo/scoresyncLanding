@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: scoresync-landing
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_SCORESYNC_WAITLIST_URL
+        sync: false
